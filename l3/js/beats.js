@@ -1,48 +1,185 @@
-/* Placeholder beat sheet for S4 Physics pure-play scaffold. Timed captions in js/cues.js. */
+/* Synced from /workspace/s4phy-anim-l3/beats.json after TTS retime */
 var CH4_BEATS = [
   {
     "id": "B01",
-    "title": "開場｜比熱容與熱容量",
-    "duration_s": 5,
-    "visual": "Title card: 比熱容與熱容量.",
-    "keyword": "比熱容 SHC",
-    "script_refs": { "yue": "B01", "cmn": "B01", "en": "B01" },
-    "notes": "Placeholder scaffold — fill beats/TTS later."
+    "title": "開場｜第3課比熱容與熱容量",
+    "duration_s": 10.6,
+    "visual": "Title card fades in:「第3課｜比熱容與熱容量」. Twin symbols c and C slide in from opposite sides; a small thermometer glyph pulses once. Subtitle: Specific heat capacity & heat capacity.",
+    "keyword": "比熱容 · 熱容量",
+    "script_refs": {
+      "yue": "B01",
+      "cmn": "B01",
+      "en": "B01"
+    },
+    "notes": "Intro only; no quiz tease. Crossfade into B02.; VO wait/gap=0.35s (full-track); retime from TTS max=10.18s +0.4"
   },
   {
     "id": "B02",
-    "title": "熱容量",
-    "duration_s": 6,
-    "visual": "Placeholder: heat capacity.",
-    "keyword": "C = Q/ΔT",
-    "script_refs": { "yue": "B02", "cmn": "B02", "en": "B02" },
-    "notes": "Placeholder scaffold — fill beats/TTS later."
+    "title": "c 與 C 總覽",
+    "duration_s": 13.2,
+    "visual": "Two cards flip open side-by-side: left card「c 比熱容」with 1 kg block icon; right card「C 熱容量」with whole-object silhouette. Arrow labelled C = m c draws between them. Units badges stay dim until later beats.",
+    "keyword": "c vs C",
+    "script_refs": {
+      "yue": "B02",
+      "cmn": "B02",
+      "en": "B02"
+    },
+    "notes": "Set contrast before definitions. Action: cards flip + linking arrow.; VO wait/gap=0.35s (full-track); retime from TTS max=12.77s +0.4"
   },
   {
     "id": "B03",
-    "title": "比熱容",
-    "duration_s": 6,
-    "visual": "Placeholder: specific heat capacity.",
-    "keyword": "c = Q/(mΔT)",
-    "script_refs": { "yue": "B03", "cmn": "B03", "en": "B03" },
-    "notes": "Placeholder scaffold — fill beats/TTS later."
+    "title": "c｜比熱容定義與單位",
+    "duration_s": 13.0,
+    "visual": "1 kg block heats; thermometer rises by exactly 1 °C. Energy packet labelled E flies into the block. Definition banner builds:「使 1 kg 升高 1 °C 所需能量」. Unit chip assembles: J · kg⁻¹ · °C⁻¹ (stacked as J / (kg · °C) for later HTML).",
+    "keyword": "c · J kg⁻¹ °C⁻¹",
+    "script_refs": {
+      "yue": "B03",
+      "cmn": "B03",
+      "en": "B03"
+    },
+    "notes": "Property of substance; independent of mass. Stacked-fraction friendly unit wording.; VO wait/gap=0.35s (full-track); retime from TTS max=12.60s +0.4"
   },
   {
     "id": "B04",
-    "title": "公式 Q = mcΔT",
-    "duration_s": 6,
-    "visual": "Placeholder: formula board.",
-    "keyword": "Q = mcΔT",
-    "script_refs": { "yue": "B04", "cmn": "B04", "en": "B04" },
-    "notes": "Placeholder scaffold — fill beats/TTS later."
+    "title": "C｜熱容量 · C = mc",
+    "duration_s": 13.6,
+    "visual": "Whole object (any mass) heats; thermometer +1 °C. Formula C = m c lights term-by-term (m then c then product). Unit chip: J °C⁻¹. Contrast flash: same substance, larger m → larger C bar grows.",
+    "keyword": "C = mc · J °C⁻¹",
+    "script_refs": {
+      "yue": "B04",
+      "cmn": "B04",
+      "en": "B04"
+    },
+    "notes": "Whole-object quantity. Depends on both m and substance.; VO wait/gap=0.35s (full-track); retime from TTS max=13.22s +0.4"
   },
   {
     "id": "B05",
+    "title": "公式｜E = mcΔT",
+    "duration_s": 13.9,
+    "visual": "Formula board: E = m × c × ΔT terms light left→right. Alternate badge Q = mcΔT fades in briefly then rests beside E. Unit strip: E,Q → J; m → kg; c → J kg⁻¹ °C⁻¹; ΔT → °C (or K).",
+    "keyword": "E = mcΔT",
+    "script_refs": {
+      "yue": "B05",
+      "cmn": "B05",
+      "en": "B05"
+    },
+    "notes": "Classroom also writes Q = mcΔT. ΔT in °C or K (same numerical value).; VO wait/gap=0.35s (full-track); retime from TTS max=13.51s +0.4"
+  },
+  {
+    "id": "B06",
+    "title": "公式｜E = CΔT",
+    "duration_s": 8.2,
+    "visual": "Board morphs: mc collapses into single capital C; E = C ΔT remains. Tiny caption:「因為 C = mc」. Energy bar scales with ΔT slider.",
+    "keyword": "E = CΔT",
+    "script_refs": {
+      "yue": "B06",
+      "cmn": "B06",
+      "en": "B06"
+    },
+    "notes": "Short link beat. Also Q = CΔT.; VO wait/gap=0.35s (full-track); retime from TTS max=7.78s +0.4"
+  },
+  {
+    "id": "B07",
+    "title": "示範｜鋁塊 E = mcΔT",
+    "duration_s": 17.2,
+    "visual": "Worked demo card: Al block. Values stamp in: m = 0.30 kg, c = 900 J kg⁻¹ °C⁻¹, ΔT = 20.0 °C. Product animates (0.30)(900)(20.0) → counter lands on E = 5.40×10³ J (3 s.f.). Unit J highlighted.",
+    "keyword": "E = 5.40×10³ J",
+    "script_refs": {
+      "yue": "B07",
+      "cmn": "B07",
+      "en": "B07"
+    },
+    "notes": "Teaching demo not quiz. Ignore heat loss. Keep 3 s.f.; VO wait/gap=0.35s (full-track); retime from TTS max=16.75s +0.4"
+  },
+  {
+    "id": "B08",
+    "title": "電熱理想｜Pt = mcΔT",
+    "duration_s": 10.2,
+    "visual": "Heater icon + power meter P. Energy from electricity E = P t flows into block as mcΔT. Ideal banner:「無熱損失 → Pt = mcΔT」. Dashed leak arrows stay crossed out.",
+    "keyword": "Pt = mcΔT",
+    "script_refs": {
+      "yue": "B08",
+      "cmn": "B08",
+      "en": "B08"
+    },
+    "notes": "Ideal / no-loss case only. Sets up B09 and efficiency later.; VO wait/gap=0.35s (full-track); retime from TTS max=9.82s +0.4"
+  },
+  {
+    "id": "B09",
+    "title": "示範｜由 E、P 求 t",
+    "duration_s": 16.2,
+    "visual": "Demo card: P = 50 W, E = 9.00×10³ J. Stacked fraction t = E / P builds; numbers (9.00×10³) / 50 → t = 180 s. Clock hand sweeps 180 s. Caption: same formula family as E = Pt.",
+    "keyword": "t = 180 s",
+    "script_refs": {
+      "yue": "B09",
+      "cmn": "B09",
+      "en": "B09"
+    },
+    "notes": "Stacked-fraction friendly: t = E/P. Teaching demo; all electrical energy → heat.; VO wait/gap=0.35s (full-track); retime from TTS max=15.77s +0.4"
+  },
+  {
+    "id": "B10",
+    "title": "示範｜E = CΔT",
+    "duration_s": 18.4,
+    "visual": "Metal block card: C = 400 J °C⁻¹, ΔT = 15.0 °C. Product (400)(15.0) → E = 6.00×10³ J. Side note chip lights: C = m c.",
+    "keyword": "E = 6.00×10³ J",
+    "script_refs": {
+      "yue": "B10",
+      "cmn": "B10",
+      "en": "B10"
+    },
+    "notes": "3 s.f. Reinforce relation C = mc on screen.; VO wait/gap=0.35s (full-track); retime from TTS max=18.00s +0.4"
+  },
+  {
+    "id": "B11",
+    "title": "概念｜c 細則 ΔT 大",
+    "duration_s": 15.1,
+    "visual": "Two equal-mass blocks absorb identical E packets. c_X bar shorter than c_Y. Thermometers: X climbs higher. Stacked rearrange ΔT = E / (m c) highlights: same E,m → smaller c → larger ΔT. Label「X 升溫較大」.",
+    "keyword": "ΔT = E/(mc)",
+    "script_refs": {
+      "yue": "B11",
+      "cmn": "B11",
+      "en": "B11"
+    },
+    "notes": "Concept demo from Notion 例7. Stacked fraction ΔT = E/(mc).; VO wait/gap=0.35s (full-track); retime from TTS max=14.74s +0.4"
+  },
+  {
+    "id": "B12",
+    "title": "熱效率｜η = mcΔT / Pt",
+    "duration_s": 16.3,
+    "visual": "Efficiency gauge 0–100%. Stacked fraction builds: η = (m c ΔT) / (P t) × 100%. Useful energy (mcΔT) fills green; input Pt fills grey with leak arrows for heat loss. Banner: 有用 / 輸入 × 100%.",
+    "keyword": "η · 熱效率",
+    "script_refs": {
+      "yue": "B12",
+      "cmn": "B12",
+      "en": "B12"
+    },
+    "notes": "Stacked-fraction friendly for HTML. Stress useful÷input not upside-down.; VO wait/gap=0.35s (full-track); retime from TTS max=15.86s +0.4"
+  },
+  {
+    "id": "B13",
+    "title": "常見誤解 Misconceptions",
+    "duration_s": 18.1,
+    "visual": "Four warning tiles stamp in sequence with red X then green check: (1) c ≠ C; (2) 唔好漏單位; (3) ΔT = 終溫 − 初溫，唔係淨終溫／淨初溫; (4) η 分子＝有用、分母＝輸入，唔好倒轉.",
+    "keyword": "常見誤解",
+    "script_refs": {
+      "yue": "B13",
+      "cmn": "B13",
+      "en": "B13"
+    },
+    "notes": "Four Notion misconceptions only. Pure teaching; no self-check Qs.; VO wait/gap=0.35s (full-track); retime from TTS max=17.66s +0.4"
+  },
+  {
+    "id": "B14",
     "title": "短重溫 Recap",
-    "duration_s": 5,
-    "visual": "Placeholder recap panel.",
+    "duration_s": 17.4,
+    "visual": "Four recap panels fly in: (1) c vs C + units; (2) E = mcΔT · E = CΔT · C = mc; (3) Pt = mcΔT (ideal) + η stacked; (4) ΔT = E/(mc) tip. Final stamp:「純複習 · 記住單位同 ΔT」. Fade out.",
     "keyword": "重溫 Recap",
-    "script_refs": { "yue": "B05", "cmn": "B05", "en": "B05" },
-    "notes": "Placeholder scaffold — fill beats/TTS later."
+    "script_refs": {
+      "yue": "B14",
+      "cmn": "B14",
+      "en": "B14"
+    },
+    "notes": "No quiz / no 自測 / no 一頁練習. End of pure playback.; VO wait/gap=0.35s (full-track); retime from TTS max=17.04s +0.4"
   }
 ];

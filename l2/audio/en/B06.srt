@@ -1,0 +1,12 @@
+1
+00:00:00,000 --> 00:00:02,455
+A conductor lets heat pass easily;
+
+2
+00:00:02,455 --> 00:00:04,044
+an insulator does not.
+
+3
+00:00:04,044 --> 00:00:08,304
+Metals conduct well; wood, plastic, and air conduct poorly.
+

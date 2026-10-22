@@ -1,0 +1,12 @@
+1
+00:00:00,000 --> 00:00:03,437
+Convection happens in fluids — liquids and gases.
+
+2
+00:00:03,437 --> 00:00:09,399
+Heated fluid becomes less dense and rises; cooler fluid sinks, forming a circulation.
+
+3
+00:00:09,399 --> 00:00:12,696
+In a pot, hot water rises and cold water sinks.
+

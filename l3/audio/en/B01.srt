@@ -1,0 +1,12 @@
+1
+00:00:00,000 --> 00:00:02,305
+Today we revise Lesson Three.
+
+2
+00:00:02,305 --> 00:00:05,644
+Specific heat capacity, and heat capacity.
+
+3
+00:00:05,644 --> 00:00:10,176
+Remember: c and C are different — and so are their units.
+

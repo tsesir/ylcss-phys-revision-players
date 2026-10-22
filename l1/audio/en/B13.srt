@@ -1,0 +1,4 @@
+1
+00:00:00,000 --> 00:00:17,712
+Substitute: twelve point zero minus two point zero, divided by twenty-two point zero minus two point zero, times one hundred. That is ten divided by twenty, times one hundred. So theta equals fifty point zero degrees Celsius. Always include the unit.
+

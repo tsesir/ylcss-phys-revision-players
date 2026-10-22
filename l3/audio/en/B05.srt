@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:02,215
+Energy for heating or cooling:
+
+2
+00:00:02,215 --> 00:00:04,652
+E equals m times c times delta T.
+
+3
+00:00:04,652 --> 00:00:08,270
+In class you may also write Q equals m c delta T.
+
+4
+00:00:08,270 --> 00:00:13,512
+E and Q are in joules; delta T in Celsius or kelvin has the same value.
+

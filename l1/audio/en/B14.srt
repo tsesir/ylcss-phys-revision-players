@@ -1,0 +1,4 @@
+1
+00:00:00,000 --> 00:00:17,088
+Three common misconceptions. One: not every thermometer is naturally linear — you need fixed-point calibration. Two: a thermometer reading is not the absolute amount of heat or internal energy. Three: do not use body temperature or room temperature as Celsius fixed points.
+

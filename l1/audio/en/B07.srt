@@ -1,0 +1,4 @@
+1
+00:00:00,000 --> 00:00:09,672
+The melting point of pure ice — the ice point — is zero degrees Celsius. The boiling point of pure water — the steam point — is one hundred degrees Celsius.
+

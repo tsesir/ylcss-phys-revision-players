@@ -1,0 +1,4 @@
+1
+00:00:00,000 --> 00:00:12,624
+Here is a short worked demo. L-zero is two point zero centimetres; L-one-hundred is twenty-two point zero centimetres; measured L is twelve point zero centimetres. Find temperature theta.
+

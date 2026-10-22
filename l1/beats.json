@@ -1,0 +1,197 @@
+[
+  {
+    "id": "B01",
+    "title": "開場｜第1課溫度與溫度計",
+    "duration_s": 5.3,
+    "visual": "Title card fades in:「第1課｜溫度與溫度計」. Thermometer icon + Oxford Book 1 badge. Subtitle: Temperature & thermometers · YLCSS S4 Physics. Soft pulse once, then crossfade.",
+    "keyword": "溫度 Temperature",
+    "script_refs": {
+      "yue": "B01",
+      "cmn": "B01",
+      "en": "B01"
+    },
+    "notes": "Intro only; pure playback. Glyph 溫度 (as Notion), not 温度.; VO wait/gap=0.35s (full-track); retime from TTS max=4.87s +0.4"
+  },
+  {
+    "id": "B02",
+    "title": "關鍵術語快閃",
+    "duration_s": 12.2,
+    "visual": "Terminology chips cascade in: 溫度 · 攝氏溫標 · 固定點 · 冰點 · 汽點 · 液體玻璃溫度計 · 測溫物質 · 線性關係 · 熱平衡. English gloss under each chip. Grid settles.",
+    "keyword": "術語 Terminology",
+    "script_refs": {
+      "yue": "B02",
+      "cmn": "B02",
+      "en": "B02"
+    },
+    "notes": "From Notion 1.1 table; flash only — detail comes later.; VO wait/gap=0.35s (full-track); retime from TTS max=11.83s +0.4"
+  },
+  {
+    "id": "B03",
+    "title": "溫度與熱｜總覽對比",
+    "duration_s": 7.3,
+    "visual": "Split screen: left panel「溫度 Temperature」with thermometer; right「熱 Heat」with energy-arrow between hot/cold blocks. Divider stamp:「唔好撈亂 Don't mix up」.",
+    "keyword": "溫度 vs 熱",
+    "script_refs": {
+      "yue": "B03",
+      "cmn": "B03",
+      "en": "B03"
+    },
+    "notes": "Setup contrast before KE / transfer detail.; VO wait/gap=0.35s (full-track); retime from TTS max=6.86s +0.4"
+  },
+  {
+    "id": "B04",
+    "title": "溫度 ↔ 粒子平均動能",
+    "duration_s": 10.9,
+    "visual": "Particle cloud animates: slow dots (cool) → fast dots (hot). Meter labelled「平均動能 Average KE」rises with speed. Caption: 溫度反映冷熱程度.",
+    "keyword": "平均動能 Average KE",
+    "script_refs": {
+      "yue": "B04",
+      "cmn": "B04",
+      "en": "B04"
+    },
+    "notes": "Action: particles speed up as temperature rises.; VO wait/gap=0.35s (full-track); retime from TTS max=10.49s +0.4"
+  },
+  {
+    "id": "B05",
+    "title": "熱＝因溫度差的能量轉移",
+    "duration_s": 7.9,
+    "visual": "Hot block (red) and cold block (blue) touch. Yellow energy packets flow hot→cold until colours equalise. Banner:「熱是能量轉移 · 唔係『含有幾多溫度』」.",
+    "keyword": "熱 Heat transfer",
+    "script_refs": {
+      "yue": "B05",
+      "cmn": "B05",
+      "en": "B05"
+    },
+    "notes": "Core misconception fix: heat ≠ amount of temperature.; VO wait/gap=0.35s (full-track); retime from TTS max=7.46s +0.4"
+  },
+  {
+    "id": "B06",
+    "title": "攝氏溫標｜兩個固定點",
+    "duration_s": 7.2,
+    "visual": "Celsius scale bar draws 0→100. Two pins drop at ends labelled「固定點 fixed points」. Badge:「標準大氣壓 Standard atmospheric pressure」.",
+    "keyword": "固定點 Fixed points",
+    "script_refs": {
+      "yue": "B06",
+      "cmn": "B06",
+      "en": "B06"
+    },
+    "notes": "Emphasise standard atmospheric pressure condition.; VO wait/gap=0.35s (full-track); retime from TTS max=6.79s +0.4"
+  },
+  {
+    "id": "B07",
+    "title": "冰點 0 °C｜汽點 100 °C",
+    "duration_s": 10.1,
+    "visual": "Left: ice melting into pure water → stamp「冰點 ice point = 0 °C」. Right: pure water boiling → steam → stamp「汽點／蒸汽點 steam point = 100 °C」. Scale fills between.",
+    "keyword": "0 °C · 100 °C",
+    "script_refs": {
+      "yue": "B07",
+      "cmn": "B07",
+      "en": "B07"
+    },
+    "notes": "Notion: 汽點／蒸汽點 both OK; VO can say 汽點.; VO wait/gap=0.35s (full-track); retime from TTS max=9.67s +0.4"
+  },
+  {
+    "id": "B08",
+    "title": "液體玻璃溫度計｜測溫物質",
+    "duration_s": 10.3,
+    "visual": "Cross-section of liquid-in-glass thermometer builds: bulb → capillary → liquid column. Callouts: 水銀／酒精 as 測溫物質 thermometric substance. Volume expands as heat icons hit bulb; column rises.",
+    "keyword": "測溫物質 Thermometric substance",
+    "script_refs": {
+      "yue": "B08",
+      "cmn": "B08",
+      "en": "B08"
+    },
+    "notes": "Action: volume change → column length change.; VO wait/gap=0.35s (full-track); retime from TTS max=9.89s +0.4"
+  },
+  {
+    "id": "B09",
+    "title": "線性假設｜冰點汽點均分",
+    "duration_s": 10.2,
+    "visual": "Column length L plotted vs θ: straight line through (L0,0) and (L100,100). Interval between ice and steam point divides into 100 equal ticks. Banner:「假設線性關係 linear assumption」.",
+    "keyword": "線性關係 Linear",
+    "script_refs": {
+      "yue": "B09",
+      "cmn": "B09",
+      "en": "B09"
+    },
+    "notes": "Assumption — not all thermometers naturally linear (preview B14).; VO wait/gap=0.35s (full-track); retime from TTS max=9.79s +0.4"
+  },
+  {
+    "id": "B10",
+    "title": "公式｜θ＝(L−L0)/(L100−L0)×100",
+    "duration_s": 18.6,
+    "visual": "Formula board lights term-by-term: θ = (L − L₀) / (L₁₀₀ − L₀) × 100. Labels pop: L₀ 冰點長度 · L₁₀₀ 汽點長度 · L 待測長度 · unit °C. TTS-friendly on-screen: L 零 / L 一百 / theta.",
+    "keyword": "θ 公式 Formula",
+    "script_refs": {
+      "yue": "B10",
+      "cmn": "B10",
+      "en": "B10"
+    },
+    "notes": "Dense; may need >8s after TTS retime. Spell L 零 / L 一百 / theta.; VO wait/gap=0.35s (full-track); retime from TTS max=18.19s +0.4"
+  },
+  {
+    "id": "B11",
+    "title": "反求｜L＝L0＋(θ/100)(L100−L0)",
+    "duration_s": 8.0,
+    "visual": "Reverse formula flips onto board: L = L₀ + (θ/100)(L₁₀₀ − L₀). Arrow loops θ ↔ L to show bidirectional use under linear assumption.",
+    "keyword": "反求 L",
+    "script_refs": {
+      "yue": "B11",
+      "cmn": "B11",
+      "en": "B11"
+    },
+    "notes": "Brief reverse only; teaching, not quiz.; VO wait/gap=0.35s (full-track); retime from TTS max=7.63s +0.4"
+  },
+  {
+    "id": "B12",
+    "title": "示範｜已知 L0 L100 L",
+    "duration_s": 13.0,
+    "visual": "Worked-demo card: L₀ = 2.0 cm · L₁₀₀ = 22.0 cm · L = 12.0 cm. Thermometer graphic marks three column heights. Stamp:「教學示範 DEMO · 非測驗」.",
+    "keyword": "示範 DEMO",
+    "script_refs": {
+      "yue": "B12",
+      "cmn": "B12",
+      "en": "B12"
+    },
+    "notes": "One short worked demo only (Notion 例1). Not a pause-quiz.; VO wait/gap=0.35s (full-track); retime from TTS max=12.62s +0.4"
+  },
+  {
+    "id": "B13",
+    "title": "示範計算｜θ＝50.0 °C",
+    "duration_s": 18.1,
+    "visual": "Substitution animates: (12.0−2.0)/(22.0−2.0)×100 → 10.0/20.0×100 → 50.0. Final answer badge:「θ = 50.0 °C」with unit highlight. Side note: 1M 代值 + 1A 連單位.",
+    "keyword": "50.0 °C",
+    "script_refs": {
+      "yue": "B13",
+      "cmn": "B13",
+      "en": "B13"
+    },
+    "notes": "Teaching walkthrough of Notion 例1; keep unit °C.; VO wait/gap=0.35s (full-track); retime from TTS max=17.71s +0.4"
+  },
+  {
+    "id": "B14",
+    "title": "常見誤解｜三點警示",
+    "duration_s": 17.5,
+    "visual": "Three warning cards flip: (1) 唔係所有溫度計天然線性 — need fixed-point calibration; (2) 讀數 ≠ 熱／內能絕對值; (3) 唔好用體溫／室溫當攝氏固定點. Red X on wrong ideas; green check on correct fixed points 0/100.",
+    "keyword": "誤解 Misconceptions",
+    "script_refs": {
+      "yue": "B14",
+      "cmn": "B14",
+      "en": "B14"
+    },
+    "notes": "From Notion 常見誤解 callout; keep brief.; VO wait/gap=0.35s (full-track); retime from TTS max=17.09s +0.4"
+  },
+  {
+    "id": "B15",
+    "title": "短重溫 Recap",
+    "duration_s": 17.6,
+    "visual": "Four recap panels fly in: (1) 溫度↔平均KE · 熱＝溫度差能量轉移; (2) 固定點 0/100 °C; (3) 線性公式 θ; (4) 示範 50.0 °C. Final stamp:「純複習 · 記住公式同固定點」. Fade out.",
+    "keyword": "重溫 Recap",
+    "script_refs": {
+      "yue": "B15",
+      "cmn": "B15",
+      "en": "B15"
+    },
+    "notes": "No quiz / no 1.4 / no 1.5 / no 一頁練習. End of pure playback.; VO wait/gap=0.35s (full-track); retime from TTS max=17.18s +0.4"
+  }
+]

@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:04,067
+Short demo. Aluminium mass zero point three zero kilograms,
+
+2
+00:00:04,067 --> 00:00:08,066
+c nine hundred, delta T twenty point zero degrees Celsius.
+
+3
+00:00:08,066 --> 00:00:13,236
+E equals zero point three zero times nine hundred times twenty point zero —
+
+4
+00:00:13,236 --> 00:00:16,752
+five point four zero times ten to the three joules.
+

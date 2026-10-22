@@ -1,0 +1,4 @@
+1
+00:00:00,000 --> 00:00:10,488
+Temperature tells how hot or cold an object is, and links to the average kinetic energy of its particles. Faster particles mean higher average KE, and higher temperature.
+

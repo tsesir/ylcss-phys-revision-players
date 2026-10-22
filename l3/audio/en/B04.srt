@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:02,675
+Heat capacity C is the energy needed
+
+2
+00:00:02,675 --> 00:00:06,241
+to raise the whole object by one degree Celsius.
+
+3
+00:00:06,241 --> 00:00:08,618
+Unit: joules per degree Celsius.
+
+4
+00:00:08,618 --> 00:00:13,224
+And remember: C equals m times c — larger mass means larger C.
+

@@ -1,0 +1,166 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.305
+Today we revise Lesson Three.
+
+00:00:02.305 --> 00:00:05.644
+Specific heat capacity, and heat capacity.
+
+00:00:05.644 --> 00:00:10.176
+Remember: c and C are different — and so are their units.
+
+00:00:10.526 --> 00:00:16.201
+On the left, small c — specific heat capacity — a property of the substance.
+
+00:00:16.201 --> 00:00:20.905
+On the right, capital C — heat capacity — for the whole object.
+
+00:00:20.905 --> 00:00:23.294
+They link by C equals m times c.
+
+00:00:23.644 --> 00:00:26.582
+Specific heat capacity c is the energy needed
+
+00:00:26.582 --> 00:00:30.434
+to raise one kilogram of a substance by one degree Celsius.
+
+00:00:30.434 --> 00:00:33.437
+Unit: joules per kilogram per degree Celsius —
+
+00:00:33.437 --> 00:00:36.244
+J divided by kilogram times degree Celsius.
+
+00:00:36.594 --> 00:00:39.269
+Heat capacity C is the energy needed
+
+00:00:39.269 --> 00:00:42.835
+to raise the whole object by one degree Celsius.
+
+00:00:42.835 --> 00:00:45.212
+Unit: joules per degree Celsius.
+
+00:00:45.212 --> 00:00:49.818
+And remember: C equals m times c — larger mass means larger C.
+
+00:00:50.168 --> 00:00:52.383
+Energy for heating or cooling:
+
+00:00:52.383 --> 00:00:54.820
+E equals m times c times delta T.
+
+00:00:54.820 --> 00:00:58.438
+In class you may also write Q equals m c delta T.
+
+00:00:58.438 --> 00:01:03.680
+E and Q are in joules; delta T in Celsius or kelvin has the same value.
+
+00:01:04.030 --> 00:01:06.083
+Because C equals m times c,
+
+00:01:06.083 --> 00:01:09.353
+we can also write E equals C times delta T.
+
+00:01:09.353 --> 00:01:11.254
+Same physics — two forms.
+
+00:01:11.604 --> 00:01:15.671
+Short demo. Aluminium mass zero point three zero kilograms,
+
+00:01:15.671 --> 00:01:19.670
+c nine hundred, delta T twenty point zero degrees Celsius.
+
+00:01:19.670 --> 00:01:24.840
+E equals zero point three zero times nine hundred times twenty point zero —
+
+00:01:24.840 --> 00:01:28.356
+five point four zero times ten to the three joules.
+
+00:01:28.706 --> 00:01:32.255
+With an electric heater, in the ideal case with no heat loss,
+
+00:01:32.255 --> 00:01:34.291
+all electrical energy becomes heat:
+
+00:01:34.291 --> 00:01:35.979
+P times t equals m c delta T.
+
+00:01:35.979 --> 00:01:38.306
+Remember — that is the ideal assumption.
+
+00:01:38.656 --> 00:01:40.787
+Short demo. Power fifty watts,
+
+00:01:40.787 --> 00:01:45.404
+energy needed nine point zero zero times ten to the three joules.
+
+00:01:45.404 --> 00:01:47.534
+Time t equals E divided by P —
+
+00:01:47.534 --> 00:01:54.424
+nine point zero zero times ten to the three, divided by fifty, equals one hundred eighty seconds.
+
+00:01:54.774 --> 00:02:00.774
+Short demo. A metal block has heat capacity four hundred joules per degree Celsius,
+
+00:02:00.774 --> 00:02:02.726
+delta T fifteen point zero.
+
+00:02:02.726 --> 00:02:06.196
+E equals four hundred times fifteen point zero —
+
+00:02:06.196 --> 00:02:09.810
+six point zero zero times ten to the three joules.
+
+00:02:09.810 --> 00:02:12.774
+Relation to remember: C equals m times c.
+
+00:02:13.124 --> 00:02:16.947
+Same mass, two substances, same energy absorbed.
+
+00:02:16.947 --> 00:02:20.373
+If c is smaller, from E equals m c delta T,
+
+00:02:20.373 --> 00:02:24.435
+rearrange to delta T equals E divided by m times c.
+
+00:02:24.435 --> 00:02:27.860
+So smaller c means larger temperature rise.
+
+00:02:28.210 --> 00:02:29.884
+Thermal efficiency eta:
+
+00:02:29.884 --> 00:02:34.687
+useful energy, divided by input energy, times one hundred percent.
+
+00:02:34.687 --> 00:02:39.853
+In experiments: m c delta T, divided by P t, times one hundred percent.
+
+00:02:39.853 --> 00:02:44.074
+Useful on top, input underneath — never flip the fraction.
+
+00:02:44.424 --> 00:02:46.009
+Four common mistakes.
+
+00:02:46.009 --> 00:02:48.047
+One: do not mix up c and C.
+
+00:02:48.047 --> 00:02:52.652
+Two: even a correct number needs units, or you lose the mark.
+
+00:02:52.652 --> 00:02:58.012
+Three: delta T is final minus initial — not the final or initial alone.
+
+00:02:58.012 --> 00:03:02.088
+Four: do not turn the efficiency fraction upside down.
+
+00:03:02.438 --> 00:03:07.307
+Recap: c is per kilogram, C is the whole object; C equals m c.
+
+00:03:07.307 --> 00:03:10.526
+E equals m c delta T, and also C delta T.
+
+00:03:10.526 --> 00:03:16.808
+Ideal electric heating: P t equals m c delta T; efficiency is useful over input.
+
+00:03:16.808 --> 00:03:19.478
+Lesson Three — pure revision done.

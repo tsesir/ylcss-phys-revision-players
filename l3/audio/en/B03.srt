@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:02,938
+Specific heat capacity c is the energy needed
+
+2
+00:00:02,938 --> 00:00:06,790
+to raise one kilogram of a substance by one degree Celsius.
+
+3
+00:00:06,790 --> 00:00:09,793
+Unit: joules per kilogram per degree Celsius —
+
+4
+00:00:09,793 --> 00:00:12,600
+J divided by kilogram times degree Celsius.
+

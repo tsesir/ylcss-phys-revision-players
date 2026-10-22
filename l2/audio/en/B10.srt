@@ -1,0 +1,12 @@
+1
+00:00:00,000 --> 00:00:02,340
+How does a vacuum flask keep heat in?
+
+2
+00:00:02,340 --> 00:00:06,451
+A vacuum between the double walls cuts conduction and convection.
+
+3
+00:00:06,451 --> 00:00:10,752
+Silvered shiny surfaces reduce absorption and emission of radiation.
+

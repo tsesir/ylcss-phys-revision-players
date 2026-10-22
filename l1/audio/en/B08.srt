@@ -1,0 +1,4 @@
+1
+00:00:00,000 --> 00:00:09,888
+A liquid-in-glass thermometer uses a thermometric substance, such as mercury or alcohol. Its volume changes with temperature, so the liquid-column length changes too.
+

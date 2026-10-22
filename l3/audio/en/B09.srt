@@ -1,0 +1,16 @@
+1
+00:00:00,000 --> 00:00:02,131
+Short demo. Power fifty watts,
+
+2
+00:00:02,131 --> 00:00:06,748
+energy needed nine point zero zero times ten to the three joules.
+
+3
+00:00:06,748 --> 00:00:08,878
+Time t equals E divided by P —
+
+4
+00:00:08,878 --> 00:00:15,768
+nine point zero zero times ten to the three, divided by fifty, equals one hundred eighty seconds.
+

@@ -1,0 +1,20 @@
+1
+00:00:00,000 --> 00:00:06,000
+Short demo. A metal block has heat capacity four hundred joules per degree Celsius,
+
+2
+00:00:06,000 --> 00:00:07,952
+delta T fifteen point zero.
+
+3
+00:00:07,952 --> 00:00:11,422
+E equals four hundred times fifteen point zero —
+
+4
+00:00:11,422 --> 00:00:15,036
+six point zero zero times ten to the three joules.
+
+5
+00:00:15,036 --> 00:00:18,000
+Relation to remember: C equals m times c.
+
