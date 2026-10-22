@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.0 — 2026-10-22
+
+- Replaced the shared title-card scaffold in `l1/js/scenes.js`, `l2/js/scenes.js`, and `l3/js/scenes.js` with one scene per beat (L1 15, L2 14, L3 14).
+- Audio, cues, beat timings, and the collapsible fullscreen chrome are unchanged.
+
 ## 0.2.0 — 2026-10-22
 
 - Formal `l1/`、`l2/`、`l3/` use the Ch4 ui-collapse chrome: dock collapsed by default, opens downward from the top bar, fullscreen plus `.is-fs-fallback`.

@@ -831,6 +831,184 @@ button, input { font-family: inherit; }
   overflow-wrap: break-word;
 }
 
+/* Lesson scenes only. Player chrome is unchanged. */
+.scene .term-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  height: 100%;
+  align-content: center;
+}
+.scene .term-grid .chip-box {
+  min-height: 92px;
+  font-size: 30px;
+  line-height: 1.2;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.scene .term-grid small,
+.scene .chip-box small {
+  display: block;
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+.scene .banner {
+  text-align: center;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1.3;
+  padding: 10px 14px;
+}
+.scene .cloud {
+  position: relative;
+  height: 100%;
+  min-height: 240px;
+  overflow: hidden;
+}
+.scene .pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  min-height: 160px;
+}
+.scene .blk {
+  min-width: 140px;
+  min-height: 108px;
+  padding: 8px 12px;
+  border-radius: 18px;
+  border: 3px solid var(--ink);
+  box-shadow: 5px 5px 0 var(--ink);
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1.15;
+  text-align: center;
+}
+.scene .blk.hot { background: var(--red); color: #fff; }
+.scene .blk.cold { background: var(--blue); }
+.scene .blk.warm { background: #ffe14a; }
+.scene .blk.mint { background: var(--mint); }
+.scene .pkt {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffe14a;
+  border: 3px solid var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+  flex: 0 0 auto;
+}
+.scene .thermo {
+  width: 64px;
+  height: 230px;
+  margin: 0 auto;
+  border: 4px solid var(--ink);
+  border-radius: 40px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.scene .thermo i {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  height: 18%;
+  background: var(--red);
+  border-radius: 18px;
+  border: 3px solid var(--ink);
+}
+.scene .scale-track {
+  position: relative;
+  height: 36px;
+  margin: 36px 48px 78px;
+  border: 3px solid var(--ink);
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blue), #fff 48%, var(--red));
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.scene .pin {
+  position: absolute;
+  top: -16px;
+  width: 16px;
+  height: 64px;
+  margin-left: -8px;
+  background: var(--ink);
+  border-radius: 6px;
+}
+.scene .pin b {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 22px;
+  line-height: 1.2;
+  background: var(--card);
+  border: 3px solid var(--ink);
+  border-radius: 10px;
+  padding: 3px 8px;
+}
+.scene .rod-stage { position: relative; height: 230px; }
+.scene .rod {
+  position: absolute;
+  left: 130px;
+  right: 150px;
+  top: 96px;
+  height: 44px;
+  background: #d9d3c7;
+  border: 3px solid var(--ink);
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+.scene .rod-end {
+  position: absolute;
+  top: 58px;
+  width: 110px;
+  height: 110px;
+}
+.scene .rod-end.left { left: 8px; }
+.scene .rod-end.right { right: 8px; background: var(--pink); }
+.scene .spark { position: absolute; left: 140px; top: 104px; }
+.scene .good { background: var(--lime); }
+.scene .bad { background: #ffd6d6; }
+.scene svg.chart { width: 100%; height: 240px; display: block; }
+.scene .tick-row {
+  display: flex;
+  height: 22px;
+  margin: 6px 12px 0;
+  border-bottom: 3px solid var(--ink);
+}
+.scene .tick-row i {
+  flex: 1 1 0;
+  border-left: 2px solid rgba(20, 20, 20, 0.4);
+}
+.scene .dark-stage {
+  height: 100%;
+  background: #141414;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  padding: 16px 18px;
+}
+/* Layout classes must not stretch the scene past the stage. */
+.scene.bitmap-layout,
+.scene.fmt-row,
+.scene.dark-stage,
+.scene.split,
+.scene.hw,
+.scene.formula-board,
+.scene.recap-row {
+  height: auto;
+  min-height: 0;
+}
+
 .dock {
   width: min(1280px, 100%);
   margin: 16px auto 0;
