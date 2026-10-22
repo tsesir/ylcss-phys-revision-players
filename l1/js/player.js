@@ -12,7 +12,8 @@ var speed = 1;
 var voWait = 0.5;
 var voiceLang = null;
 var subsOn = true;
-var SUB_SIZE_KEY = "phys-player-sub-size";
+var STORE_PREFIX = document.documentElement.getAttribute("data-store") || "phys";
+var SUB_SIZE_KEY = STORE_PREFIX + "-sub-size";
 var SUB_SIZES = { s: "28px", m: "34px", l: "42px" };
 var subSize = "m";
 var cueBook = { yue: {}, cmn: {}, en: {} };
@@ -589,7 +590,15 @@ function refreshFromFiles() {
   });
 }
 
+function isShellMaximized() {
+  var shell = document.getElementById("playerShell");
+  if (!shell) return false;
+  var nativeFs = document.fullscreenElement || document.webkitFullscreenElement || null;
+  return nativeFs === shell || shell.classList.contains("is-fs-fallback");
+}
+
 function fitStage() {
+  if (isShellMaximized()) return;
   var slot = document.getElementById("stageSlot");
   var scaleWrap = document.getElementById("stageScale");
   var scale = Math.min(1, slot.clientWidth / 1280);

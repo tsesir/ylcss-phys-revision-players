@@ -1,90 +1,124 @@
 <!DOCTYPE html>
-<html lang="zh-HK">
+<html lang="zh-HK" data-store="phys-l1">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function () {
+      var prefix = document.documentElement.getAttribute("data-store") || "phys-l1";
+      var size = "m";
+      try {
+        var saved = localStorage.getItem(prefix + "-sub-size");
+        if (saved === "s" || saved === "m" || saved === "l") size = saved;
+      } catch (err) {}
+      document.documentElement.setAttribute("data-sub-size", size);
+      try {
+        if (localStorage.getItem(prefix + "-dock") === "open") {
+          document.documentElement.classList.add("dock-open");
+        }
+      } catch (err2) {}
+    })();
+  </script>
   <title>溫習動畫：溫度與溫度計</title>
   <meta name="assignment-hint" content="Phys-L1-Temp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500;700;900&family=Noto+Sans+TC:wght@500;700;900&family=Noto+Sans:wght@500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/player.css">
+  <link rel="stylesheet" href="ui.css">
 </head>
 <body>
   <main class="page">
     <h1 class="sr-only">溫習動畫：溫度與溫度計 純播放複習</h1>
-    <div class="stage-slot" id="stageSlot">
-      <div class="stage-scale" id="stageScale">
-        <div class="stage" id="stage" role="region" aria-label="溫度與溫度計動畫畫面" data-sub-size="m">
-          <div class="blob blob-a"></div>
-          <div class="blob blob-b"></div>
-          <div class="blob blob-c"></div>
-          <header class="topbar">
-            <div class="badge" id="beatBadge">01</div>
-            <div class="title-wrap">
-              <p class="beat-title" id="beatTitle">開場｜溫度與溫度計</p>
-              <div class="kw" id="beatKeyword">溫度 Temperature</div>
+    <div class="player-shell" id="playerShell">
+      <div class="chrome-bar" id="chromeBar">
+        <button type="button" class="ctrl" id="panelToggle" data-testid="dock-toggle" aria-expanded="false" aria-controls="controlDock">
+          <span class="when-collapsed">展開控制</span>
+          <span class="when-open">收合控制</span>
+        </button>
+        <button type="button" class="ctrl" id="fsBtn" data-testid="fullscreen" aria-pressed="false">全螢幕</button>
+      </div>
+      <div class="dock-clip" id="dockClip">
+        <div class="dock-clip-inner">
+        <section class="dock" id="controlDock" aria-label="播放控制" aria-hidden="true" inert>
+          <div class="dock-row">
+            <button type="button" class="ctrl primary" id="playBtn" data-testid="play">播放</button>
+            <button type="button" class="ctrl" id="pauseBtn" data-testid="pause" disabled>暫停</button>
+            <button type="button" class="ctrl" id="prevBtn" data-testid="prev">上一節</button>
+            <button type="button" class="ctrl" id="nextBtn" data-testid="next">下一節</button>
+            <button type="button" class="ctrl" id="replayBtn" data-testid="replay">重播</button>
+            <span class="beat-id" id="beatId" data-testid="beatId">B01 · 1/5</span>
+            <span class="clock" id="clock" data-testid="clock">00:00 / 00:00</span>
+          </div>
+          <label class="sr-only" for="scrub">進度</label>
+          <input class="scrub" id="scrub" data-testid="scrub" type="range" min="0" max="1000" step="1" value="0">
+
+          <div class="dock-row">
+            <span class="field-label">聲線</span>
+            <button type="button" class="ctrl is-on" data-lang="yue" data-testid="lang-yue" aria-pressed="true">粵語 <small class="track-state">已就緒</small></button>
+            <button type="button" class="ctrl" data-lang="cmn" data-testid="lang-cmn" aria-pressed="false">普通話 <small class="track-state">已就緒</small></button>
+            <button type="button" class="ctrl" data-lang="en" data-testid="lang-en" aria-pressed="false">English <small class="track-state">已就緒</small></button>
+            <button type="button" class="ctrl is-on" id="subsBtn" data-testid="subs" aria-pressed="true">字幕開</button>
+          </div>
+
+          <div class="dock-row">
+            <span class="field-label">字幕大小</span>
+            <button type="button" class="ctrl" data-sub-size="s" data-testid="sub-size-s" aria-pressed="false">小</button>
+            <button type="button" class="ctrl is-on" data-sub-size="m" data-testid="sub-size-m" aria-pressed="true">中</button>
+            <button type="button" class="ctrl" data-sub-size="l" data-testid="sub-size-l" aria-pressed="false">大</button>
+          </div>
+
+          <div class="dock-row">
+            <label class="field-label" for="speedSlider">播放速度</label>
+            <input id="speedSlider" data-testid="speed" type="range" min="0.5" max="2" step="0.05" value="1">
+            <span class="speed-readout" id="speedReadout">1x</span>
+            <button type="button" class="ctrl" data-speed="0.75">0.75x</button>
+            <button type="button" class="ctrl is-on" data-speed="1">1x</button>
+            <button type="button" class="ctrl" data-speed="1.25">1.25x</button>
+            <button type="button" class="ctrl" data-speed="1.5">1.5x</button>
+            <button type="button" class="ctrl" data-speed="2">2x</button>
+          </div>
+
+          <div class="dock-row">
+            <label class="field-label" for="waitSlider">旁白停頓</label>
+            <input id="waitSlider" data-testid="wait" type="range" min="0" max="3" step="0.1" value="0.5">
+            <span class="wait-readout" id="waitReadout">0.5 秒</span>
+            <button type="button" class="ctrl is-on" data-wait="0.5">短</button>
+            <button type="button" class="ctrl" data-wait="1.5">中</button>
+            <button type="button" class="ctrl" data-wait="3">長</button>
+          </div>
+          <p class="status" id="status" data-testid="status">正在準備畫面…</p>
+        </section>
+
+        </div>
+      </div>
+
+      <div class="stage-slot" id="stageSlot">
+        <div class="stage-scale" id="stageScale">
+          <div class="stage" id="stage" role="region" aria-label="溫度與溫度計動畫畫面">
+            <div class="blob blob-a"></div>
+            <div class="blob blob-b"></div>
+            <div class="blob blob-c"></div>
+            <header class="topbar">
+              <div class="badge" id="beatBadge">01</div>
+              <div class="title-wrap">
+                <p class="beat-title" id="beatTitle">開場｜溫度與溫度計</p>
+                <div class="kw" id="beatKeyword">溫度 Temperature</div>
+              </div>
+              <div class="chapter-pill">S4 Phys · Phys-L1-Temp</div>
+            </header>
+            <div class="scene-stack" id="sceneStack"></div>
+            <div class="dwell-chip" id="dwellChip" hidden>停頓</div>
+            <div class="sub-wrap">
+              <p class="sub-bar" id="subtitle" aria-live="polite"></p>
             </div>
-            <div class="chapter-pill">S4 Phys · Phys-L1-Temp</div>
-          </header>
-          <div class="scene-stack" id="sceneStack"></div>
-          <div class="dwell-chip" id="dwellChip" hidden>停頓</div>
-          <div class="sub-wrap">
-            <p class="sub-bar" id="subtitle" aria-live="polite"></p>
           </div>
         </div>
       </div>
+
+      <p class="fs-hint" id="fsHint" role="status" hidden></p>
     </div>
 
-    <section class="dock" aria-label="播放控制">
-      <div class="dock-row">
-        <button type="button" class="ctrl primary" id="playBtn" data-testid="play">播放</button>
-        <button type="button" class="ctrl" id="pauseBtn" data-testid="pause" disabled>暫停</button>
-        <button type="button" class="ctrl" id="prevBtn" data-testid="prev">上一節</button>
-        <button type="button" class="ctrl" id="nextBtn" data-testid="next">下一節</button>
-        <button type="button" class="ctrl" id="replayBtn" data-testid="replay">重播</button>
-        <span class="beat-id" id="beatId" data-testid="beatId">B01 · 1/5</span>
-        <span class="clock" id="clock" data-testid="clock">00:00 / 00:00</span>
-      </div>
-      <label class="sr-only" for="scrub">進度</label>
-      <input class="scrub" id="scrub" data-testid="scrub" type="range" min="0" max="1000" step="1" value="0">
-
-      <div class="dock-row">
-        <span class="field-label">聲線</span>
-        <button type="button" class="ctrl is-on" data-lang="yue" data-testid="lang-yue" aria-pressed="true">粵語 <small class="track-state">已就緒</small></button>
-        <button type="button" class="ctrl" data-lang="cmn" data-testid="lang-cmn" aria-pressed="false">普通話 <small class="track-state">已就緒</small></button>
-        <button type="button" class="ctrl" data-lang="en" data-testid="lang-en" aria-pressed="false">English <small class="track-state">已就緒</small></button>
-        <button type="button" class="ctrl is-on" id="subsBtn" data-testid="subs" aria-pressed="true">字幕開</button>
-      </div>
-
-      <div class="dock-row">
-        <span class="field-label">字幕大小</span>
-        <button type="button" class="ctrl" data-sub-size="s" data-testid="sub-size-s" aria-pressed="false">小</button>
-        <button type="button" class="ctrl is-on" data-sub-size="m" data-testid="sub-size-m" aria-pressed="true">中</button>
-        <button type="button" class="ctrl" data-sub-size="l" data-testid="sub-size-l" aria-pressed="false">大</button>
-      </div>
-
-      <div class="dock-row">
-        <label class="field-label" for="speedSlider">播放速度</label>
-        <input id="speedSlider" data-testid="speed" type="range" min="0.5" max="2" step="0.05" value="1">
-        <span class="speed-readout" id="speedReadout">1x</span>
-        <button type="button" class="ctrl" data-speed="0.75">0.75x</button>
-        <button type="button" class="ctrl is-on" data-speed="1">1x</button>
-        <button type="button" class="ctrl" data-speed="1.25">1.25x</button>
-        <button type="button" class="ctrl" data-speed="1.5">1.5x</button>
-        <button type="button" class="ctrl" data-speed="2">2x</button>
-      </div>
-
-      <div class="dock-row">
-        <label class="field-label" for="waitSlider">旁白停頓</label>
-        <input id="waitSlider" data-testid="wait" type="range" min="0" max="3" step="0.1" value="0.5">
-        <span class="wait-readout" id="waitReadout">0.5 秒</span>
-        <button type="button" class="ctrl is-on" data-wait="0.5">短</button>
-        <button type="button" class="ctrl" data-wait="1.5">中</button>
-        <button type="button" class="ctrl" data-wait="3">長</button>
-      </div>
-      <p class="status" id="status" data-testid="status">正在準備畫面…</p>
-    </section>
   </main>
   <script src="vendor/gsap.min.js"></script>
   <script>
@@ -96,5 +130,6 @@
   <script src="js/cues.js"></script>
   <script src="js/scenes.js"></script>
   <script src="js/player.js"></script>
+  <script src="ui.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
-# YLCSS S4 Physics · 純播放溫習動畫（占位殼）
+# YLCSS S4 Physics · 純播放溫習動畫
 
-粵語為主。三個自包含靜態播放器，從 Ch4 ICT 純播放器骨架複製而來，**尚未填入真實考點內容／TTS**。
+粵語為主。三個自包含靜態播放器，beats、畫面同 TTS 已在各級資料夾；今次只換控制列 chrome（對齊 Ch4 ui-collapse）。
 
 | Level | 課題 | 路徑 | ASSIGNMENT hint |
 |-------|------|------|-----------------|
@@ -10,8 +10,8 @@
 
 ## Purpose / 用途
 
-- **zh-HK**：畀學生喺 Notion／GitHub Pages 嵌入「純播放」溫習動畫；而家係空殼（title cards + 占位字幕），方便之後補 beats、畫面同旁白。
-- **EN**: Self-contained static player shells for S4 Physics revision. Dock controls (粵／普／英, speed, VO wait, captions, **subtitle size**) already work; content and TTS are placeholders.
+- **zh-HK**：畀學生喺 Notion／GitHub Pages 嵌入「純播放」溫習動畫。正式網址係 `/l1/`、`/l2/`、`/l3/`。
+- **EN**: Self-contained static players for S4 Physics revision. Each level keeps its own beats, scenes, cues, and TTS. Controls: 粵／普／英, speed, VO wait, captions, subtitle size, collapsible dock, fullscreen.
 
 ## Notion embed URL placeholders
 
@@ -25,19 +25,31 @@ https://<user>.github.io/<repo>/l3/
 
 Notion: `/embed` block → paste the level URL. Each folder ships `.htaccess` / `_headers` with `frame-ancestors *` for iframe embedding.
 
-## How beats / TTS will be filled later
+## How beats / TTS are wired
 
-1. Edit `lN/js/beats.js` — replace the 5 placeholder beats (title, duration_s, keyword, visual notes).
-2. Build real scenes in `lN/js/scenes.js` (today every beat is a generic title card).
-3. Generate TTS mp3 + VTT per beat under `audio/{yue,cmn,en}/Bxx.mp3` (+ `.vtt`), then rewrite `audio/manifest.json` (array of `{lang, beat, path, vtt, duration_s, ...}`).
-4. Refresh `js/cues.js` (`CH4_CUES` + optional `CH4_AUDIO_DURATIONS`) from the VTT/manifest.
-5. Until mp3 exist, the player **degrades to silent play** (lang buttons show 無音軌; animation + placeholder captions still run).
+1. `lN/js/beats.js` — beat titles, durations, keywords.
+2. `lN/js/scenes.js` — scene graphics.
+3. TTS mp3 + VTT per beat under `audio/{yue,cmn,en}/Bxx.mp3` (+ `.vtt`), listed in `audio/manifest.json`.
+4. `js/cues.js` (`CH4_CUES` + optional `CH4_AUDIO_DURATIONS`).
+5. If mp3 are missing, the player **degrades to silent play** (lang buttons show 無音軌; animation and captions still run).
 
 Global names `CH4_BEATS` / `CH4_CUES` / `CH4_AUDIO_DURATIONS` are kept so `player.js` stays compatible with the Ch4 pack.
 
 ## Subtitle size
 
-Dock row **字幕大小**：小／中／大 → CSS `--sub-size` **28 / 34 / 42 px** (default **中**). Persisted in `localStorage` key `phys-player-sub-size`. Test ids: `sub-size-s` | `sub-size-m` | `sub-size-l`.
+Dock row **字幕大小**：小／中／大 → CSS `--sub-size` **28 / 34 / 42 px** (default **中**). Test ids: `sub-size-s` | `sub-size-m` | `sub-size-l`.
+
+## Chrome（對齊 Ch4 ui-collapse）
+
+正式路徑 `l1/`、`l2/`、`l3/` 的控制列預設收合，由頂部向下展開、向上收合。全螢幕優先用 Fullscreen API；iOS／沒有 `allow="fullscreen"` 的 iframe 會加上 `.is-fs-fallback` 填滿視窗。全螢幕舞台用 contain：`scale = min(slotW/1280, slotH/720)`，標題到字幕整幅可見。
+
+`localStorage` 以課題分開，不會寫入 Ch4 的鍵，三級之間也不會互相覆蓋：
+
+| Level | 字幕大小 | 控制列 |
+|-------|----------|--------|
+| L1 | `phys-l1-sub-size` | `phys-l1-dock` |
+| L2 | `phys-l2-sub-size` | `phys-l2-dock` |
+| L3 | `phys-l3-sub-size` | `phys-l3-dock` |
 
 ## Local preview
 
@@ -48,4 +60,4 @@ cd /workspace/ylcss-phys-revision-players/l1 && python3 -m http.server 8765
 
 ## Controls present
 
-Play / Pause / Prev / Next / Replay · scrub · clock · beat id · 粵／普／英 · 字幕開關 · **字幕大小 小／中／大** · speed 0.5–2x (+ presets) · 旁白停頓 (VO wait) · status line.
+展開／收合控制 · 全螢幕 · Play / Pause / Prev / Next / Replay · scrub · clock · beat id · 粵／普／英 · 字幕開關 · **字幕大小 小／中／大** · speed 0.5–2x (+ presets) · 旁白停頓 (VO wait) · status line. 純播放，沒有測驗。

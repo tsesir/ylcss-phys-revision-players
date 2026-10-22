@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0 — 2026-10-22
+
+- Formal `l1/`、`l2/`、`l3/` use the Ch4 ui-collapse chrome: dock collapsed by default, opens downward from the top bar, fullscreen plus `.is-fs-fallback`.
+- Fullscreen stage is contain-scaled: `scale = min(slotW/1280, slotH/720)` so the title through the subtitle stay visible.
+- Per-level `localStorage` keys `phys-l1-*`, `phys-l2-*`, `phys-l3-*` (subtitle size and dock). Beats, scenes, cues, and TTS audio are unchanged.
+
 ## 0.1.0 — 2026-10-22
 
 - Initial monorepo scaffolds: `l1/` 溫度與溫度計, `l2/` 熱、溫度與熱傳遞, `l3/` 比熱容與熱容量.
