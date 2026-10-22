@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.0 — 2026-10-22
+
+- Ship the revised Yue and Mandarin VO for L1–L3 (retimed beats and cues). Totals: L1 222.7s, L2 152.6s, L3 430.2s. English tracks unchanged. The L1 contrast stamp now says 唔好混淆.
+
 ## 0.4.0 — 2026-10-22
 
 - L1–L3 show a large stage Play button before playback, and a Replay button after the final beat. Audio, cues, scenes, and dock chrome are unchanged.

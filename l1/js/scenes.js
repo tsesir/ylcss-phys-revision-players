@@ -183,7 +183,7 @@ function buildB03() {
         '<div class="panel sticker"><h3>溫度 Temperature</h3><div class="fmt-ico">' + thermoSvg() + "</div><p>冷熱程度</p></div>" +
         '<div class="panel sticker"><h3>熱 Heat</h3><div class="pair"><div class="blk hot">熱</div><div class="pkt"></div><div class="blk cold">冷</div></div><p>能量轉移</p></div>' +
       "</div>" +
-      '<div class="stamp-wrap"><div class="stamp">唔好撈亂 · Don\'t mix up</div></div>' +
+      '<div class="stamp-wrap"><div class="stamp">唔好混淆 · Don\'t mix up</div></div>' +
     "</div>"
   );
 }

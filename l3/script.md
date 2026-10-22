@@ -279,7 +279,7 @@ Useful on top, input underneath — never flip the fraction.
 
 ### 粵 Yue
 四個常見錯。
-一：唔好撈亂 c 同 C。
+一：唔好混淆 c 同 C。
 二：計啱數都要寫單位，唔係會失分。
 三：delta T 係終溫減初溫，唔係淨係終溫或者初溫。
 四：效率分數唔好上下倒轉。

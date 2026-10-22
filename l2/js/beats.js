@@ -1,4 +1,4 @@
-/* Synced from /workspace/s4phy-anim-l2/beats.json after TTS retime */
+/* Synced from beats.json */
 var CH4_BEATS = [
   {
     "id": "B01",

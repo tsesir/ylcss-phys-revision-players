@@ -48,7 +48,7 @@ Temperature is how hot or cold something is — linked to the average kinetic en
 
 **粵 yue**  
 內能，係物體入面所有粒子嘅動能同勢能嘅總和。  
-唔好同整件物體郁動嘅動能，或者重力勢能撈亂。
+唔好同整件物體郁動嘅動能，或者重力勢能混淆。
 
 **普 cmn**  
 內能，是物體內所有粒子的動能與勢能的總和。  

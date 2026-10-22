@@ -29,7 +29,7 @@
 
 | 粵語（主口播） | 普通話 | English |
 |---|---|---|
-| 溫度同熱，好多人撈亂。一邊係溫度，一邊係熱；兩個唔同概念。 | 溫度和熱，很多人混淆。一邊是溫度，一邊是熱；兩個不同概念。 | Temperature and heat are often mixed up. One is temperature; the other is heat — two different ideas. |
+| 溫度同熱，好多人混淆。一邊係溫度，一邊係熱；兩個唔同概念。 | 溫度和熱，很多人混淆。一邊是溫度，一邊是熱；兩個不同概念。 | Temperature and heat are often mixed up. One is temperature; the other is heat — two different ideas. |
 
 ---
 
