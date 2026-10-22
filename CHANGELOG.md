@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.0 — 2026-10-22
+
+- L1–L3 show a large stage Play button before playback, and a Replay button after the final beat. Audio, cues, scenes, and dock chrome are unchanged.
+
 ## 0.3.0 — 2026-10-22
 
 - Replaced the shared title-card scaffold in `l1/js/scenes.js`, `l2/js/scenes.js`, and `l3/js/scenes.js` with one scene per beat (L1 15, L2 14, L3 14).

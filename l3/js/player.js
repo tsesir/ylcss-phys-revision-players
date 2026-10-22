@@ -30,6 +30,9 @@ var audioMeta = {
 
 var stage;
 var sceneStack;
+var stagePlayBtn;
+var stageReplayBtn;
+var hasStarted = false;
 var badge;
 var titleEl;
 var keywordEl;
@@ -290,6 +293,7 @@ function renderHud() {
   pauseBtn.disabled = !playing;
   playBtn.classList.toggle("primary", !playing);
   pauseBtn.classList.toggle("primary", playing);
+  syncTransportOverlays(playing, t);
 }
 
 function parkTime(audio, seconds) {
@@ -373,6 +377,22 @@ function onTick() {
 function onComplete() {
   if (activeAudio) activeAudio.pause();
   renderHud();
+}
+
+function syncTransportOverlays(playing, t) {
+  if (!stagePlayBtn || !stageReplayBtn || !master) return;
+  var dur = master.duration() || 0;
+  var atEnd = dur > 0 && t >= dur - 0.05;
+  if (playing) hasStarted = true;
+  stagePlayBtn.hidden = hasStarted || playing;
+  stageReplayBtn.hidden = !(hasStarted && !playing && atEnd);
+}
+
+function playFromStart() {
+  if (!master) return;
+  master.pause();
+  master.time(0);
+  play();
 }
 
 function play() {
@@ -631,6 +651,8 @@ function loadSubSize() {
 
 function bind() {
   playBtn.addEventListener("click", play);
+  if (stagePlayBtn) stagePlayBtn.addEventListener("click", playFromStart);
+  if (stageReplayBtn) stageReplayBtn.addEventListener("click", replay);
   pauseBtn.addEventListener("click", pause);
   document.getElementById("prevBtn").addEventListener("click", prev);
   document.getElementById("nextBtn").addEventListener("click", function () {
@@ -751,6 +773,8 @@ function cacheDom() {
   clock = document.getElementById("clock");
   beatIdEl = document.getElementById("beatId");
   playBtn = document.getElementById("playBtn");
+  stagePlayBtn = document.getElementById("stagePlay");
+  stageReplayBtn = document.getElementById("stageReplay");
   pauseBtn = document.getElementById("pauseBtn");
   statusEl = document.getElementById("status");
   speedSlider = document.getElementById("speedSlider");
