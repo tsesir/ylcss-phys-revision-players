@@ -120,7 +120,7 @@ var CH4_BEATS = [
   {
     "id": "B10",
     "title": "公式｜θ＝(L−L0)/(L100−L0)×100",
-    "duration_s": 42.1,
+    "duration_s": 40.5,
     "visual": "Formula board lights term-by-term: θ = (L − L₀) / (L₁₀₀ − L₀) × 100. Labels pop: L₀ 冰點長度 · L₁₀₀ 汽點長度 · L 待測長度 · unit °C. TTS-friendly on-screen: L 零 / L 一百 / theta.",
     "keyword": "θ 公式 Formula",
     "script_refs": {
@@ -133,7 +133,7 @@ var CH4_BEATS = [
   {
     "id": "B11",
     "title": "反求｜L＝L0＋(θ/100)(L100−L0)",
-    "duration_s": 25.0,
+    "duration_s": 24.0,
     "visual": "Reverse formula flips onto board: L = L₀ + (θ/100)(L₁₀₀ − L₀). Arrow loops θ ↔ L to show bidirectional use under linear assumption.",
     "keyword": "反求 L",
     "script_refs": {
@@ -146,7 +146,7 @@ var CH4_BEATS = [
   {
     "id": "B12",
     "title": "示範｜已知 L0 L100 L",
-    "duration_s": 21.0,
+    "duration_s": 20.2,
     "visual": "Worked-demo card: L₀ = 2.0 cm · L₁₀₀ = 22.0 cm · L = 12.0 cm. Thermometer graphic marks three column heights. Stamp:「教學示範 DEMO · 非測驗」.",
     "keyword": "示範 DEMO",
     "script_refs": {
