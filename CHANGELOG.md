@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.0 — 2026-10-22
+
+- L1–L3: tap or click the stage during playback to pause, and tap again to resume. Dock, scrubber, and the centred Play/Replay buttons keep their clicks.「已暫停」shows only after this gesture and hides on resume.
+
 ## 0.5.1 — 2026-10-22
 
 - English Latin-span silence is 0.1s before and after (was 0.2s). Retimed totals: L1 219.3s, L2 152.6s, L3 413.3s.

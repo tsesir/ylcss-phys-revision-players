@@ -32,7 +32,12 @@ var stage;
 var sceneStack;
 var stagePlayBtn;
 var stageReplayBtn;
+var stagePauseHint;
 var hasStarted = false;
+var stageTap = null;
+var stageGestureStamp = 0;
+var STAGE_TAP_SLOP = 24;
+var STAGE_TAP_MS = 700;
 var badge;
 var titleEl;
 var keywordEl;
@@ -386,6 +391,8 @@ function syncTransportOverlays(playing, t) {
   if (playing) hasStarted = true;
   stagePlayBtn.hidden = hasStarted || playing;
   stageReplayBtn.hidden = !(hasStarted && !playing && atEnd);
+  if (stage) stage.classList.toggle("is-tappable", !!(hasStarted && dur > 0 && !atEnd));
+  if (stagePauseHint && (playing || atEnd)) stagePauseHint.hidden = true;
 }
 
 function playFromStart() {
@@ -397,6 +404,7 @@ function playFromStart() {
 
 function play() {
   if (!master) return;
+  if (stagePauseHint) stagePauseHint.hidden = true;
   if (master.time() >= master.duration() - 0.05) master.time(0);
   master.timeScale(speed);
   clearAudioArms();
@@ -649,6 +657,76 @@ function loadSubSize() {
   applySubSize(saved || "m");
 }
 
+function stageMidPlayback() {
+  if (!master || !hasStarted) return false;
+  var dur = master.duration() || 0;
+  if (!(dur > 0)) return false;
+  return master.time() < dur - 0.05;
+}
+
+function stageTapBlockedTarget(node) {
+  if (!node || !node.closest) return false;
+  return !!node.closest("button, a, input, label, select, textarea, .transport-overlay, .dock, .chrome-bar, .scrub");
+}
+
+function onStagePointerDown(event) {
+  if (!event.isPrimary) return;
+  if (event.pointerType === "mouse" && event.button !== 0) return;
+  if (scrubbing || !stageMidPlayback()) return;
+  if (stageTapBlockedTarget(event.target)) return;
+  stageTap = {
+    id: event.pointerId,
+    x: event.clientX,
+    y: event.clientY,
+    time: Date.now()
+  };
+}
+
+function toggleStagePlayback() {
+  if (scrubbing || !stageMidPlayback()) return;
+  var dur = master.duration() || 0;
+  var t = master.time();
+  var playing = !!(master.isActive() && t < dur - 0.02);
+  if (playing) {
+    pause();
+    if (stagePauseHint && stageMidPlayback()) stagePauseHint.hidden = false;
+    return;
+  }
+  play();
+}
+
+function finishStageTap(event) {
+  if (!stageTap || event.pointerId !== stageTap.id) return;
+  var start = stageTap;
+  stageTap = null;
+  stageGestureStamp = Date.now();
+  if (event.type === "pointercancel") return;
+  if (scrubbing) return;
+  if (!stage || !stage.contains(event.target)) return;
+  if (stageTapBlockedTarget(event.target)) return;
+  var dx = event.clientX - start.x;
+  var dy = event.clientY - start.y;
+  if ((dx * dx) + (dy * dy) > STAGE_TAP_SLOP * STAGE_TAP_SLOP) return;
+  if (Date.now() - start.time > STAGE_TAP_MS) return;
+  toggleStagePlayback();
+}
+
+function onStageClick(event) {
+  if (Date.now() - stageGestureStamp < 350) return;
+  if (scrubbing) return;
+  if (!stage || !stage.contains(event.target)) return;
+  if (stageTapBlockedTarget(event.target)) return;
+  toggleStagePlayback();
+}
+
+function bindStageTap() {
+  if (!stage) return;
+  stage.addEventListener("pointerdown", onStagePointerDown);
+  stage.addEventListener("click", onStageClick);
+  window.addEventListener("pointerup", finishStageTap, true);
+  window.addEventListener("pointercancel", finishStageTap, true);
+}
+
 function bind() {
   playBtn.addEventListener("click", play);
   if (stagePlayBtn) stagePlayBtn.addEventListener("click", playFromStart);
@@ -660,11 +738,14 @@ function bind() {
   });
   document.getElementById("replayBtn").addEventListener("click", replay);
   scrub.addEventListener("pointerdown", function () { scrubbing = true; });
-  window.addEventListener("pointerup", function () {
+  function endScrub() {
     if (!scrubbing) return;
     scrubbing = false;
+    stageGestureStamp = Date.now();
     onTick();
-  });
+  }
+  window.addEventListener("pointerup", endScrub);
+  window.addEventListener("pointercancel", endScrub);
   scrub.addEventListener("input", function () {
     if (!master) return;
     var ratio = Number(scrub.value) / 1000;
@@ -718,6 +799,7 @@ function bind() {
       setVoWait(btn.dataset.wait);
     });
   });
+  bindStageTap();
   document.addEventListener("keydown", function (event) {
     if (event.target && event.target.closest && event.target.closest("input, button, textarea")) return;
     if (event.code === "Space") {
@@ -775,6 +857,7 @@ function cacheDom() {
   playBtn = document.getElementById("playBtn");
   stagePlayBtn = document.getElementById("stagePlay");
   stageReplayBtn = document.getElementById("stageReplay");
+  stagePauseHint = document.getElementById("stagePauseHint");
   pauseBtn = document.getElementById("pauseBtn");
   statusEl = document.getElementById("status");
   speedSlider = document.getElementById("speedSlider");

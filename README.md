@@ -60,4 +60,4 @@ cd /workspace/ylcss-phys-revision-players/l1 && python3 -m http.server 8765
 
 ## Controls present
 
-展開／收合控制 · 全螢幕 · Play / Pause / Prev / Next / Replay · scrub · clock · beat id · 粵／普／英 · 字幕開關 · **字幕大小 小／中／大** · speed 0.5–2x (+ presets) · 旁白停頓 (VO wait) · status line. 純播放，沒有測驗。
+展開／收合控制 · 全螢幕 · Play / Pause / Prev / Next / Replay · 播放中撳畫面暫停／再撳繼續 · scrub · clock · beat id · 粵／普／英 · 字幕開關 · **字幕大小 小／中／大** · speed 0.5–2x (+ presets) · 旁白停頓 (VO wait) · status line. 純播放，沒有測驗。
