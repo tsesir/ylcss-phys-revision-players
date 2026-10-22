@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1 — 2026-10-22
+
+- English Latin-span silence is 0.1s before and after (was 0.2s). Retimed totals: L1 219.3s, L2 152.6s, L3 413.3s.
+
 ## 0.5.0 — 2026-10-22
 
 - Ship the revised Yue and Mandarin VO for L1–L3 (retimed beats and cues). Totals: L1 222.7s, L2 152.6s, L3 430.2s. English tracks unchanged. The L1 contrast stamp now says 唔好混淆.
